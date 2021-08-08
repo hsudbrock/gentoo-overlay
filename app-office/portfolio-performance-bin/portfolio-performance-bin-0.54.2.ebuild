@@ -13,6 +13,9 @@ LICENSE="EPL-1.0"
 SLOT="0"
 KEYWORDS="~amd64"
 
+# The natural dependency is the virtual, but that is not yet supported; hence, also permit to use openjdk-bin:11
+RDEPEND="|| ( >=virtual/jre-11:* dev-java/openjdk-bin:11 )"
+
 S="${WORKDIR}/portfolio"
 
 src_install() {
