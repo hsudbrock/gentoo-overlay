@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Portfolio Performance
-
-Exec=portfolioPerformance
-Icon=/opt/portfolio-performance-bin-0.54.2/icon.xpm
-Type=Application
-Categories=Office;Finance;
-Terminal=false

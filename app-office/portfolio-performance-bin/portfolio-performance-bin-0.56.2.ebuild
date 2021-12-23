@@ -27,6 +27,17 @@ src_install() {
 	# Create a symlink to the binary from /usr/bin
 	dosym "${dest}/PortfolioPerformance" /usr/bin/portfolioPerformance
 
+
 	# Setup .desktop file
-	domenu "${FILESDIR}/portfolio-performance.desktop"
+	cat <<- EOF > "${T}/portfolio-performance.desktop" || die
+		[Desktop Entry]
+		Name=Portfolio Performance
+
+		Exec=portfolioPerformance
+		Icon=${dest}/icon.xpm
+		Type=Application
+		Categories=Office;Finance;
+		Terminal=false
+	EOF
+	domenu "${T}/portfolio-performance.desktop"
 }
